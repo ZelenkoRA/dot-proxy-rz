@@ -54,11 +54,13 @@ google.com.		260	IN	A	216.58.215.110
 
 
 ## Security Concerns
-
-- Service depends on the DoT server's way of handling encryption
-- Prone to TLS vulnerability and attacks as communication happens over TLS
+- Client-Proxy connection is not encrypted. This expose the service to a person in the middle attack
 
 ## Improvements
-
-
+- Multithreading
+- HA config for DoT servers (Prepare the list of the servers that can handle requests from the proxy)
+- Handling UDP requests
+- Caching
+- Detailed logging for SOC purposes
+- Rate-limiting as a protection for DOS attacks
 
